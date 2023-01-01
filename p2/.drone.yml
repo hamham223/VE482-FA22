@@ -1,0 +1,23 @@
+kind: pipeline
+type: ssh
+name: default
+server:
+  host:
+    from_secret: host
+  user:
+    from_secret: username
+  ssh_key:
+    from_secret: ssh_key
+steps:
+  - name: cpplint
+    commands:
+      - cpplint --linelength=120 --filter=-legal,-readability/casting,-whitespace,-runtime/printf,-runtime/threadsafe_fn,-readability/todo,-build/include_subdir,-build/c++11,-runtime/references,-build/header_guard ./src/*.cpp ./src/db/*.cpp ./src/db/*.h ./src/query/*.cpp ./src/query/*.h ./src/query/data/*.cpp ./src/query/data/*.h ./src/query/management/*.cpp ./src/query/management/*.h ./src/utils/*.h
+  - name: cppcheck
+    commands:
+      - cppcheck ./src/*.cpp ./src/db/*.cpp ./src/db/*.h ./src/query/*.cpp ./src/query/*.h ./src/query/data/*.cpp ./src/query/data/*.h ./src/query/management/*.cpp ./src/query/management/*.h ./src/utils/*.h
+  - name: compile
+    commands:
+      - cd ./src/build && cmake .. && make -j8
+  - name: time
+    commands:
+      - bash ./test.sh
