@@ -7,7 +7,7 @@ Hamster's work for ECE4820J in FA 2022.!
 
 + Professor: Manuel Charlemagne
 + Semester: 2022FA
-+ Acknowledgement: Great thanks to the Professor, TAs (Shi Weili && Zhang Kaiwen), my coding pair [Jiache Zhang](https://github.com/WillyKidd), teammates and people who helped me.
++ Acknowledgement: Great thanks to the Professor, TAs (Shi Weili(https://github.com/WillyKidd) && Zhang Kaiwen), my coding pair [Jiache Zhang](https://github.com/17876zjc), teammates and people who helped me.
 + Remarks: The solutions provided are not guarantee to be 100% correct, please be aware when referencing.
 
 ### Course Comment
