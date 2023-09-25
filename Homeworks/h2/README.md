@@ -8,7 +8,7 @@
 
    utilization: $1-p^n$
 
-2.  ![](D:\Files\VE482\Homework\h2\plot.jpg)
+2.  ![](./plot.jpg)
 
 3. + RAM left = 256 - 96 = 160 MB $\Rightarrow$ at most 3 processes
 
@@ -71,8 +71,8 @@ Steps:
 
    Press `Shift + F5`, you can see:
 
-   ![](D:\Files\VE482\Homework\h2\result1.png)
+   ![](result1.png)
 
 Then press `Shift + F7`:
 
-![](D:\Files\VE482\Homework\h2\result2.png)
+![](result2.png)
